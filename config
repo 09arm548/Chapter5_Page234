@@ -1,0 +1,6 @@
+[remote "Chapter5_1"]
+	url = git@github.com:09arm548/Chapter5_Page234.git
+[remote "Chapter5_2"]
+	url = git@github.com:09arm548/
+[remote "Chapter5_3"]
+	url = git@github.com:09arm548/Chapter5_Page234.git
