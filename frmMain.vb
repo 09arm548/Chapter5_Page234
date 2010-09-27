@@ -18,12 +18,16 @@
         Dim dblTotal As Double = 0.0
         Dim strFullName As String = txtName.Text
 
-        intF = strFullName.IndexOf(" ")
-        strFinitial = strFullName.IndexOf
 
-        strfName = CStr(strFullName.IndexOf(" "))
-        strInvoiceNumber = CStr(strfName.Substring)
-        lstInvoice .Items.Add ("Invoice Number: " &
+        strlName = CStr(CInt(strFullName.IndexOf(",")))
+        strLinitial = strFullName.Substring(0, CInt(strlName))
+        lstInvoice.Items.Add(strLinitial)
+
+        'intF = strFullName.IndexOf(" ")
+        'strFinitial = strFullName.IndexOf
+        'strfName = CStr(strFullName.IndexOf(" "))
+        'strInvoiceNumber = CStr(strfName.Substring)
+        'lstInvoice .Items.Add ("Invoice Number: " &)
         lstInvoice.Items.Add(strFullName.Substring(CInt(strfName)))
 
 
