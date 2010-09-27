@@ -40,124 +40,140 @@ Partial Class frmMain
         '
         'btnProcess
         '
-        Me.btnProcess.Location = New System.Drawing.Point(92, 275)
+        Me.btnProcess.Location = New System.Drawing.Point(123, 338)
+        Me.btnProcess.Margin = New System.Windows.Forms.Padding(4)
         Me.btnProcess.Name = "btnProcess"
-        Me.btnProcess.Size = New System.Drawing.Size(75, 23)
+        Me.btnProcess.Size = New System.Drawing.Size(100, 28)
         Me.btnProcess.TabIndex = 0
         Me.btnProcess.Text = "Process Orders"
         Me.btnProcess.UseVisualStyleBackColor = True
         '
         'btnClear
         '
-        Me.btnClear.Location = New System.Drawing.Point(395, 274)
+        Me.btnClear.Location = New System.Drawing.Point(527, 337)
+        Me.btnClear.Margin = New System.Windows.Forms.Padding(4)
         Me.btnClear.Name = "btnClear"
-        Me.btnClear.Size = New System.Drawing.Size(75, 23)
+        Me.btnClear.Size = New System.Drawing.Size(100, 28)
         Me.btnClear.TabIndex = 1
         Me.btnClear.Text = "Clear Order Form"
         Me.btnClear.UseVisualStyleBackColor = True
         '
         'btnQuit
         '
-        Me.btnQuit.Location = New System.Drawing.Point(722, 274)
+        Me.btnQuit.Location = New System.Drawing.Point(963, 337)
+        Me.btnQuit.Margin = New System.Windows.Forms.Padding(4)
         Me.btnQuit.Name = "btnQuit"
-        Me.btnQuit.Size = New System.Drawing.Size(75, 23)
+        Me.btnQuit.Size = New System.Drawing.Size(100, 28)
         Me.btnQuit.TabIndex = 2
         Me.btnQuit.Text = "Quit"
         Me.btnQuit.UseVisualStyleBackColor = True
         '
         'txtName
         '
-        Me.txtName.Location = New System.Drawing.Point(207, 22)
+        Me.txtName.Location = New System.Drawing.Point(276, 27)
+        Me.txtName.Margin = New System.Windows.Forms.Padding(4)
         Me.txtName.Name = "txtName"
-        Me.txtName.Size = New System.Drawing.Size(100, 20)
+        Me.txtName.Size = New System.Drawing.Size(132, 22)
         Me.txtName.TabIndex = 3
+        Me.txtName.Text = "Smith, Joe"
         '
         'txtAddress
         '
-        Me.txtAddress.Location = New System.Drawing.Point(207, 78)
+        Me.txtAddress.Location = New System.Drawing.Point(276, 96)
+        Me.txtAddress.Margin = New System.Windows.Forms.Padding(4)
         Me.txtAddress.Name = "txtAddress"
-        Me.txtAddress.Size = New System.Drawing.Size(100, 20)
+        Me.txtAddress.Size = New System.Drawing.Size(132, 22)
         Me.txtAddress.TabIndex = 4
         '
         'txtCity
         '
-        Me.txtCity.Location = New System.Drawing.Point(207, 137)
+        Me.txtCity.Location = New System.Drawing.Point(276, 169)
+        Me.txtCity.Margin = New System.Windows.Forms.Padding(4)
         Me.txtCity.Name = "txtCity"
-        Me.txtCity.Size = New System.Drawing.Size(100, 20)
+        Me.txtCity.Size = New System.Drawing.Size(132, 22)
         Me.txtCity.TabIndex = 5
         '
         'txtNumChair
         '
-        Me.txtNumChair.Location = New System.Drawing.Point(207, 196)
+        Me.txtNumChair.Location = New System.Drawing.Point(276, 241)
+        Me.txtNumChair.Margin = New System.Windows.Forms.Padding(4)
         Me.txtNumChair.Name = "txtNumChair"
-        Me.txtNumChair.Size = New System.Drawing.Size(39, 20)
+        Me.txtNumChair.Size = New System.Drawing.Size(51, 22)
         Me.txtNumChair.TabIndex = 6
         '
         'txtNumSofa
         '
-        Me.txtNumSofa.Location = New System.Drawing.Point(207, 234)
+        Me.txtNumSofa.Location = New System.Drawing.Point(276, 288)
+        Me.txtNumSofa.Margin = New System.Windows.Forms.Padding(4)
         Me.txtNumSofa.Name = "txtNumSofa"
-        Me.txtNumSofa.Size = New System.Drawing.Size(39, 20)
+        Me.txtNumSofa.Size = New System.Drawing.Size(51, 22)
         Me.txtNumSofa.TabIndex = 7
         '
         'lblName
         '
         Me.lblName.AutoSize = True
-        Me.lblName.Location = New System.Drawing.Point(4, 23)
+        Me.lblName.Location = New System.Drawing.Point(5, 28)
+        Me.lblName.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblName.Name = "lblName"
-        Me.lblName.Size = New System.Drawing.Size(85, 26)
+        Me.lblName.Size = New System.Drawing.Size(113, 34)
         Me.lblName.TabIndex = 8
         Me.lblName.Text = "Customer Name:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(Last, First)" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'lblAddress
         '
         Me.lblAddress.AutoSize = True
-        Me.lblAddress.Location = New System.Drawing.Point(7, 85)
+        Me.lblAddress.Location = New System.Drawing.Point(9, 105)
+        Me.lblAddress.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblAddress.Name = "lblAddress"
-        Me.lblAddress.Size = New System.Drawing.Size(48, 13)
+        Me.lblAddress.Size = New System.Drawing.Size(64, 17)
         Me.lblAddress.TabIndex = 10
         Me.lblAddress.Text = "Address:"
         '
         'lblCity
         '
         Me.lblCity.AutoSize = True
-        Me.lblCity.Location = New System.Drawing.Point(7, 144)
+        Me.lblCity.Location = New System.Drawing.Point(9, 177)
+        Me.lblCity.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblCity.Name = "lblCity"
-        Me.lblCity.Size = New System.Drawing.Size(79, 13)
+        Me.lblCity.Size = New System.Drawing.Size(104, 17)
         Me.lblCity.TabIndex = 11
         Me.lblCity.Text = "City, State, Zip:"
         '
         'lblNumChairs
         '
         Me.lblNumChairs.AutoSize = True
-        Me.lblNumChairs.Location = New System.Drawing.Point(7, 199)
+        Me.lblNumChairs.Location = New System.Drawing.Point(9, 245)
+        Me.lblNumChairs.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblNumChairs.Name = "lblNumChairs"
-        Me.lblNumChairs.Size = New System.Drawing.Size(77, 26)
+        Me.lblNumChairs.Size = New System.Drawing.Size(104, 34)
         Me.lblNumChairs.TabIndex = 12
         Me.lblNumChairs.Text = "Number of" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "chairs ordered:"
         '
         'lblNumSofas
         '
         Me.lblNumSofas.AutoSize = True
-        Me.lblNumSofas.Location = New System.Drawing.Point(7, 241)
+        Me.lblNumSofas.Location = New System.Drawing.Point(9, 297)
+        Me.lblNumSofas.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblNumSofas.Name = "lblNumSofas"
-        Me.lblNumSofas.Size = New System.Drawing.Size(74, 26)
+        Me.lblNumSofas.Size = New System.Drawing.Size(100, 34)
         Me.lblNumSofas.TabIndex = 13
         Me.lblNumSofas.Text = "Number of " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "sofas ordered:"
         '
         'lstInvoice
         '
         Me.lstInvoice.FormattingEnabled = True
-        Me.lstInvoice.Location = New System.Drawing.Point(392, 25)
+        Me.lstInvoice.ItemHeight = 16
+        Me.lstInvoice.Location = New System.Drawing.Point(523, 31)
+        Me.lstInvoice.Margin = New System.Windows.Forms.Padding(4)
         Me.lstInvoice.Name = "lstInvoice"
-        Me.lstInvoice.Size = New System.Drawing.Size(404, 225)
+        Me.lstInvoice.Size = New System.Drawing.Size(537, 276)
         Me.lstInvoice.TabIndex = 14
         '
         'frmMain
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(932, 334)
+        Me.ClientSize = New System.Drawing.Size(1243, 411)
         Me.Controls.Add(Me.lstInvoice)
         Me.Controls.Add(Me.lblNumSofas)
         Me.Controls.Add(Me.lblNumChairs)
@@ -172,6 +188,7 @@ Partial Class frmMain
         Me.Controls.Add(Me.btnQuit)
         Me.Controls.Add(Me.btnClear)
         Me.Controls.Add(Me.btnProcess)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmMain"
         Me.Text = "Furniture Order Form"
         Me.ResumeLayout(False)
