@@ -20,8 +20,10 @@
 
 
         strlName = CStr(CInt(strFullName.IndexOf(",")))
-        strLinitial = strFullName.Substring(0, CInt(strlName))
+        strLinitial = strFullName.Substring(0, 1)
+        strFinitial = strFullName.Substring(CInt((CDbl(strlName) + 2)), 1)
         lstInvoice.Items.Add(strLinitial)
+        lstInvoice.Items.Add(strFinitial)
 
         'intF = strFullName.IndexOf(" ")
         'strFinitial = strFullName.IndexOf
