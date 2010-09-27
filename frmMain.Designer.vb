@@ -75,7 +75,7 @@ Partial Class frmMain
         Me.txtName.Name = "txtName"
         Me.txtName.Size = New System.Drawing.Size(132, 22)
         Me.txtName.TabIndex = 3
-        Me.txtName.Text = "Smith, Joe"
+        Me.txtName.Text = "Grossman, Stephen"
         '
         'txtAddress
         '
@@ -84,6 +84,7 @@ Partial Class frmMain
         Me.txtAddress.Name = "txtAddress"
         Me.txtAddress.Size = New System.Drawing.Size(132, 22)
         Me.txtAddress.TabIndex = 4
+        Me.txtAddress.Text = "123 Main Street"
         '
         'txtCity
         '
@@ -92,6 +93,7 @@ Partial Class frmMain
         Me.txtCity.Name = "txtCity"
         Me.txtCity.Size = New System.Drawing.Size(132, 22)
         Me.txtCity.TabIndex = 5
+        Me.txtCity.Text = "Altoona, PA 16602"
         '
         'txtNumChair
         '

@@ -17,16 +17,20 @@
         Dim dblTax As Double = 0.0
         Dim dblTotal As Double = 0.0
         Dim strFullName As String = txtName.Text
-        Dim strZip As String = ""
+        Dim strZip As String = "765"
 
 
         strlName = CStr(CInt(strFullName.IndexOf(",")))
         strLinitial = strFullName.Substring(0, 1)
         strFinitial = strFullName.Substring(CInt((CDbl(strlName) + 2)), 1)
-        strAddress = CStr(strAddress.Length)
-        strZip = strAddress.Substring(CInt(strAddress) - 5)
-        lstInvoice.Items.Add(strLinitial)
-        lstInvoice.Items.Add(strFinitial & strZip)
+
+        'strAddress = CStr(strAddress.Length)
+        strCity = CStr(strCity.IndexOf(","))
+        strZip = CStr(CInt(CDbl(strCity) + 5))
+        'strCity = CStr(strCity.Substring(strZip), 5))
+
+        lstInvoice.Items.Add(strLinitial & " " & strFinitial)
+        lstInvoice.Items.Add(CDbl(strCity) + 5)
         
 
         'intF = strFullName.IndexOf(" ")
