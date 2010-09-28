@@ -102,6 +102,7 @@ Partial Class frmMain
         Me.txtNumChair.Name = "txtNumChair"
         Me.txtNumChair.Size = New System.Drawing.Size(51, 22)
         Me.txtNumChair.TabIndex = 6
+        Me.txtNumChair.Text = "4"
         '
         'txtNumSofa
         '
@@ -110,6 +111,7 @@ Partial Class frmMain
         Me.txtNumSofa.Name = "txtNumSofa"
         Me.txtNumSofa.Size = New System.Drawing.Size(51, 22)
         Me.txtNumSofa.TabIndex = 7
+        Me.txtNumSofa.Text = "3"
         '
         'lblName
         '
@@ -163,6 +165,7 @@ Partial Class frmMain
         '
         'lstInvoice
         '
+        Me.lstInvoice.Font = New System.Drawing.Font("Courier New", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lstInvoice.FormattingEnabled = True
         Me.lstInvoice.ItemHeight = 16
         Me.lstInvoice.Location = New System.Drawing.Point(523, 31)
@@ -173,6 +176,7 @@ Partial Class frmMain
         '
         'frmMain
         '
+        Me.AcceptButton = Me.btnProcess
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1243, 411)
