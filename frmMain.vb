@@ -3,6 +3,8 @@
 
     Private Sub btnProcess_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnProcess.Click
 
+        Dim strPrices As IO.StreamReader
+        strPrices = IO.File.OpenText("Data.txt")
         Dim strInvoiceNumber As String = ("Invoice Number:")
         Dim strfName As String = txtName.Text
         Dim strlName As String
@@ -22,6 +24,8 @@
         Dim n As Integer
         Dim x As Integer
         Dim strFuName As String
+        Dim strChairPrice As String = 
+        Dim dblSofaPrice As Double
 
 
         x = strFullName.IndexOf(" ")
@@ -34,17 +38,15 @@
         strlName = CStr(CInt(strFullName.IndexOf(",")))  'this line is giving length of last name
         strLinitial = strFullName.Substring(0, 1)           'this line is giving last initial
         strFinitial = strFullName.Substring(CInt((CDbl(strlName) + 2)), 1)  'this line is first initial
-        'intNum = strFullName.IndexOf(",")
-        'intNum1 = CInt(strFullName.Length - CDbl(strlName))
+        
 
         intF = CInt(CStr(CInt((strCity.IndexOf(",")))))    'this line stops at city
         intF = intF + 5
         strZip = CStr(CInt(strCity.Substring(CInt(intF), 5)))
 
-
+        'building invoice
         lstInvoice.Items.Add(strInvoiceNumber & "  " & strLinitial & strFinitial & strZip)  'returns GS16602
         lstInvoice.Items.Add(" ")
-        'lstInvoice.Items.Add(intNum1)
         lstInvoice.Items.Add("Name: " & strfName & " " & strFuName)
         lstInvoice.Items.Add("Address: " & strAddress)
         lstInvoice.Items.Add("City: " & strCity)
@@ -54,13 +56,7 @@
 
 
 
-        'intF = strFullName.IndexOf(" ")
-        'strFinitial = strFullName.IndexOf
-        'strfName = CStr(strFullName.IndexOf(" "))
-        'strInvoiceNumber = CStr(strfName.Substring)
-        'lstInvoice .Items.Add ("Invoice Number: " &)
-        ' lstInvoice.Items.Add(strFullName.Substring(CInt(strfName)))
-
+        
 
 
 
