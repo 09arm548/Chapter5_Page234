@@ -5,14 +5,11 @@
 
         Dim strFormat As String = "{0, 15} {1, 15}"
         Dim strPrices As IO.StreamReader = IO.File.OpenText("../../Data.txt")
-        Dim strInvoiceNumber As String = ("Invoice Number:")
         Dim strfName As String = txtName.Text
         Dim strlName As String
         Dim strFinitial As String
         Dim strLinitial As String
         Dim intF As Integer = 5
-        Dim intNum As Integer = 0
-        Dim intNum1 As Integer = 0
         Dim strAddress As String = txtAddress.Text
         Dim strCity As String = txtCity.Text
         Dim intChair As Integer = CInt(txtNumChair.Text)
@@ -51,7 +48,7 @@
         strZip = CStr(CInt(strCity.Substring(CInt(intF), 5)))
 
         'building invoice
-        lstInvoice.Items.Add(strInvoiceNumber & "  " & strLinitial & strFinitial & strZip)  'returns GS16602
+        lstInvoice.Items.Add("Invoice Number:" & "  " & strLinitial & strFinitial & strZip)  'returns GS16602
         lstInvoice.Items.Add(" ")
         lstInvoice.Items.Add("Name: " & strfName & " " & strFuName)
         lstInvoice.Items.Add("Address: " & strAddress)
@@ -66,26 +63,17 @@
         lstInvoice.Items.Add(String.Format(strFormat, "Total Cost: ", FormatCurrency(dblTotal)))
 
 
-
-
-        
-
-
-
-
-
     End Sub
 
-    
     Private Sub btnClear_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnClear.Click
-        lstInvoice.Items.Clear()
-    End Sub
 
-    Private Function strFormat(ByVal p1 As Integer, ByVal p2 As String) As String
-        Throw New NotImplementedException
-    End Function
+        lstInvoice.Items.Clear()
+
+    End Sub
 
     Private Sub btnQuit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnQuit.Click
+
         Me.Close()
+
     End Sub
 End Class
