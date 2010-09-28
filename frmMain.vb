@@ -45,7 +45,7 @@
 
         intF = CInt(CStr(CInt((strCity.IndexOf(",")))))    'this line stops at city
         intF = intF + 5
-        strZip = CStr(CInt(strCity.Substring(CInt(intF), 5)))
+        strZip = CStr(CInt(strCity.Substring(CInt(intF), 4)))
 
         'building invoice
         lstInvoice.Items.Add("Invoice Number:" & "  " & strLinitial & strFinitial & strZip)  'returns GS16602
@@ -76,4 +76,10 @@
         Me.Close()
 
     End Sub
+
+    Function getFinitial()
+        Dim strFullName As String = txtName.Text
+
+        Return
+    End Function
 End Class
