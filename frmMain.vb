@@ -3,8 +3,8 @@
 
     Private Sub btnProcess_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnProcess.Click
 
-        Dim strPrices As IO.StreamReader
-        strPrices = IO.File.OpenText("Data.txt")
+        Dim strFormat As String = "{0, 15} {1, 15}"
+        Dim strPrices As IO.StreamReader = IO.File.OpenText("../../Data.txt")
         Dim strInvoiceNumber As String = ("Invoice Number:")
         Dim strfName As String = txtName.Text
         Dim strlName As String
@@ -24,8 +24,14 @@
         Dim n As Integer
         Dim x As Integer
         Dim strFuName As String
-        Dim strChairPrice As String = 
-        Dim dblSofaPrice As Double
+        Dim strChairPrice As String
+        strChairPrice = CStr(strPrices.ReadLine)
+        Dim strSofaPrice As String
+        strSofaPrice = CStr(strPrices.ReadLine)
+        Dim dblTotally As Double = (CDbl(strChairPrice) * intChair + CDbl(strSofaPrice) * intSofa)
+        dblTax = CDbl(strPrices.ReadLine)
+        dblTax = dblTax * dblTotally
+        dblTotal = (dblTax + dblTotally)
 
 
         x = strFullName.IndexOf(" ")
@@ -53,6 +59,12 @@
         lstInvoice.Items.Add(" ")
         lstInvoice.Items.Add("Number of Chairs: " & intChair)
         lstInvoice.Items.Add("Number of Sofas: " & intSofa)
+        lstInvoice.Items.Add(" ")
+        lstInvoice.Items.Add(String.Format(strFormat, "Cost: ", FormatCurrency(dblTotally)))
+        lstInvoice.Items.Add(String.Format(strFormat, "Sales Tax: ", FormatCurrency(dblTax)))
+        lstInvoice.Items.Add(String.Format(strFormat, " ", "----------"))
+        lstInvoice.Items.Add(String.Format(strFormat, "Total Cost: ", FormatCurrency(dblTotal)))
+
 
 
 
@@ -65,4 +77,15 @@
     End Sub
 
     
+    Private Sub btnClear_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnClear.Click
+        lstInvoice.Items.Clear()
+    End Sub
+
+    Private Function strFormat(ByVal p1 As Integer, ByVal p2 As String) As String
+        Throw New NotImplementedException
+    End Function
+
+    Private Sub btnQuit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnQuit.Click
+        Me.Close()
+    End Sub
 End Class
