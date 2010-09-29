@@ -41,16 +41,19 @@
         strlName = CStr(CInt(strFullName.IndexOf(",")))  'this line is giving length of last name
         strLinitial = strFullName.Substring(0, 1)           'this line is giving last initial
         strFinitial = strFullName.Substring(CInt((CDbl(strlName) + 2)), 1)  'this line is first initial
-        
+
 
         intF = CInt(CStr(CInt((strCity.IndexOf(",")))))    'this line stops at city
         intF = intF + 5
         strZip = CStr(CInt(strCity.Substring(CInt(intF), 4)))
+        TextBox1.Text = getLast(strFullName)
+        Dim nameee As String = TextBox1.Text
 
-        'building invoice
+    'building invoice
+
         lstInvoice.Items.Add("Invoice Number:" & "  " & strLinitial & strFinitial & strZip)  'returns GS16602
         lstInvoice.Items.Add(" ")
-        lstInvoice.Items.Add("Name: " & strfName & " " & strFuName)
+        lstInvoice.Items.Add("Name: " & strfName & " " & nameee)
         lstInvoice.Items.Add("Address: " & strAddress)
         lstInvoice.Items.Add("City: " & strCity)
         lstInvoice.Items.Add(" ")
@@ -61,9 +64,20 @@
         lstInvoice.Items.Add(String.Format(strFormat, "Sales Tax: ", FormatCurrency(dblTax)))
         lstInvoice.Items.Add(String.Format(strFormat, " ", "----------"))
         lstInvoice.Items.Add(String.Format(strFormat, "Total Cost: ", FormatCurrency(dblTotal)))
-
+        'TextBox1.Text = getLast(strFullName)
+        'Dim nameee As String = TextBox1.Text
+        'lstInvoice.Items.Add(nameee)
 
     End Sub
+    Function getLast(ByVal strName As String) As String
+
+        Dim intNum As Integer
+        intNum = strName.IndexOf(", ")
+        strName = strName.Substring(0, intNum)
+        Return strName
+
+    End Function
+
 
     Private Sub btnClear_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnClear.Click
 
@@ -77,9 +91,14 @@
 
     End Sub
 
-    Function getFinitial()
-        Dim strFullName As String = txtName.Text
+    Function getFinitial(ByVal Fname As String) As String
 
-        Return
+        Dim intFirst As Integer
+
+        intFirst = Fname.IndexOf(",")
+        Fname = Fname.Substring(intFirst, 5)
+
+        Return Fname
+
     End Function
 End Class
