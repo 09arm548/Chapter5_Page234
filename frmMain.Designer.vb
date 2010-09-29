@@ -37,6 +37,7 @@ Partial Class frmMain
         Me.lblNumSofas = New System.Windows.Forms.Label()
         Me.lstInvoice = New System.Windows.Forms.ListBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'btnProcess
@@ -182,12 +183,20 @@ Partial Class frmMain
         Me.TextBox1.Size = New System.Drawing.Size(100, 22)
         Me.TextBox1.TabIndex = 15
         '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(368, 285)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(100, 22)
+        Me.TextBox2.TabIndex = 16
+        '
         'frmMain
         '
         Me.AcceptButton = Me.btnProcess
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1243, 411)
+        Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.lstInvoice)
         Me.Controls.Add(Me.lblNumSofas)
@@ -225,5 +234,6 @@ Partial Class frmMain
     Friend WithEvents lblNumSofas As System.Windows.Forms.Label
     Friend WithEvents lstInvoice As System.Windows.Forms.ListBox
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
 
 End Class

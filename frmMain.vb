@@ -20,7 +20,6 @@
         Dim strZip As String
         Dim n As Integer
         Dim x As Integer
-        Dim strFuName As String
         Dim strChairPrice As String
         strChairPrice = CStr(strPrices.ReadLine)
         Dim strSofaPrice As String
@@ -34,8 +33,6 @@
         x = strFullName.IndexOf(" ")
         n = strFullName.IndexOf(",")
         strfName = strFullName.Substring(x)
-        strFuName = strFullName.Substring(0, n)
-
 
 
         strlName = CStr(CInt(strFullName.IndexOf(",")))  'this line is giving length of last name
@@ -48,12 +45,14 @@
         strZip = CStr(CInt(strCity.Substring(CInt(intF), 4)))
         TextBox1.Text = getLast(strFullName)
         Dim nameee As String = TextBox1.Text
+        TextBox2.Text = getFirst(strFullName)
+        Dim strFirstName As String = TextBox2.Text
 
     'building invoice
 
         lstInvoice.Items.Add("Invoice Number:" & "  " & strLinitial & strFinitial & strZip)  'returns GS16602
         lstInvoice.Items.Add(" ")
-        lstInvoice.Items.Add("Name: " & strfName & " " & nameee)
+        lstInvoice.Items.Add("Name: " & strFirstName & " " & nameee)
         lstInvoice.Items.Add("Address: " & strAddress)
         lstInvoice.Items.Add("City: " & strCity)
         lstInvoice.Items.Add(" ")
@@ -74,6 +73,14 @@
         Dim intNum As Integer
         intNum = strName.IndexOf(", ")
         strName = strName.Substring(0, intNum)
+        Return strName
+
+    End Function
+    Function getFirst(ByVal strName As String) As String
+
+        Dim intNum As Integer
+        intNum = strName.IndexOf(" ")
+        strName = strName.Substring(intNum)
         Return strName
 
     End Function
