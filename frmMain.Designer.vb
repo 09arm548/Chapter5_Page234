@@ -182,6 +182,7 @@ Partial Class frmMain
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(100, 22)
         Me.TextBox1.TabIndex = 15
+        Me.TextBox1.Visible = False
         '
         'TextBox2
         '
@@ -189,6 +190,7 @@ Partial Class frmMain
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(100, 22)
         Me.TextBox2.TabIndex = 16
+        Me.TextBox2.Visible = False
         '
         'frmMain
         '

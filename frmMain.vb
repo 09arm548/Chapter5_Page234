@@ -14,27 +14,26 @@
         Dim strFullName As String = txtName.Text
         Dim strZip As String
         Dim strChairPrice As String
-        strChairPrice = CStr(strPrices.ReadLine)
         Dim strSofaPrice As String
+        strChairPrice = CStr(strPrices.ReadLine)
         strSofaPrice = CStr(strPrices.ReadLine)
         Dim dblTotally As Double = (CDbl(strChairPrice) * intChair + CDbl(strSofaPrice) * intSofa)
         dblTax = CDbl(strPrices.ReadLine)
         dblTax = dblTax * dblTotally
         dblTotal = (dblTax + dblTotally)
 
-
         intF = CInt(CStr(CInt((strCity.IndexOf(",")))))    'this line stops at city
         intF = intF + 6
         strZip = CStr(CInt(strCity.Substring(CInt(intF), 4)))
         TextBox1.Text = getLast(strFullName)
-        Dim nameee As String = TextBox1.Text
+        Dim strLastName As String = TextBox1.Text
         TextBox2.Text = getFirst(strFullName)
         Dim strFirstName As String = TextBox2.Text
         
         'building invoice
         lstInvoice.Items.Add("Invoice Number:" & "  " & getLinitial(TextBox1.Text) & getFinitial(TextBox2.Text) & strZip)  'returns GS16602
         lstInvoice.Items.Add(" ")
-        lstInvoice.Items.Add("Name: " & strFirstName & " " & nameee)
+        lstInvoice.Items.Add("Name: " & getFirst(txtName.Text) & " " & getLast(txtName.Text))
         lstInvoice.Items.Add("Address: " & strAddress)
         lstInvoice.Items.Add("City: " & strCity)
         lstInvoice.Items.Add(" ")
